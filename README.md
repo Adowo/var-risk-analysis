@@ -1,4 +1,4 @@
-# var-risk-analysis
+# Var-risk-analysis
 
 This project looks at downside risk for a few major stocks and commodities using historical market data, focusing mainly on Value-at-Risk (VaR) and Conditional VaR (CVaR).
 
