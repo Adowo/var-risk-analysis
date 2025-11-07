@@ -26,7 +26,7 @@ Daily return distribution with VaR + CVaR highlighted:
 An equal-weighted portfolio is created using the three assets.  
 Portfolio-level return, VaR, and CVaR are computed to show how combining assets affects the downside.
 
-Portfolio price progression:
+Portfolio Return
 ![Portfolio Return](images/Portfolio_Return.png)
 
 Portfolio VaR / CVaR distribution:
