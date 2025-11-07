@@ -2,7 +2,7 @@
 
 This project looks at downside risk for a few major stocks and commodities using historical market data, focusing mainly on Value-at-Risk (VaR) and Conditional VaR (CVaR). VaR shows what you can lose given a certain confidence level over a period of time and CVaR shows, if you’re below that confidence cutoff, how bad it can get. Along with looking at each asset individually (SPY, Gold and IEFA) the project also builds an equal-weighted portfolio so we can compare single-asset risk to a diversified mix. The goal is to see how tail-risk changes when you combine assets vs holding them alone.
 
-# methods  
+# Methods  
 Prices are pulled from yfinance, then daily returns are used to estimate annual return, volatility, VaR and CVaR.  
 A quick return distribution plot highlights the VaR cutoff and the CVaR region so you can visually see how often bad days occur and how ugly they get once you cross that threshold.
 
