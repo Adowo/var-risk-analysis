@@ -15,7 +15,7 @@ A quick return distribution plot highlights the VaR cutoff and the CVaR region s
 - IEFA (international developed)
 
 ### Example  
-Daily return distribution with VaR + CVaR highlighted:
+Daily return distribution with VaR + CVaR highlighted in red:
 
 ![Gold VaR](images/Gold_Var.png)
 
