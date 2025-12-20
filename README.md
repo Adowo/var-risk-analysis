@@ -47,5 +47,5 @@ Implemented a functioning Monte Carlo simulation to generate future returns usin
 The current implementation focuses on basic simulations and distributions in a dashboard-type style. Future updates will align the 
 visualizations stylistically and analytically to compare real-world historical data to simulated Monte Carlo data, in both individual and portfolio settings.
 
-![Gold Monte Carlo](images/MONTECARLO(1))
-![Portfolio Monte Carlo](images/MONTECARLO2)
+![Gold Monte Carlo](images/MONTECARLO(1).png)
+![Portfolio Monte Carlo](images/MONTECARLO2.png)
