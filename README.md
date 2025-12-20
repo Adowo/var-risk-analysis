@@ -40,8 +40,10 @@ But once they’re held together equally, portfolio VaR drops to ~1.15% and CVaR
 This means the combined portfolio has a less extreme downside than holding any one position alone.  
 This happens because the assets don’t move perfectly together therefore diversification reduces tail-losses.
 
-## Monte Carlo (not added yet)
 
-Monte Carlo simulation is coming next. The idea is to simulate many random return paths based on historical vol + correlation, then estimate VaR/CVaR from that distribution and compare it to the historical approach.
+## Monte Carlo (Partially Completed, Working)
 
+Implemented a functioning Monte Carlo simulation to generate future returns using historical volatility and correlated assumptions.  
+The current implementation focuses on basic simulations and distributions in a dashboard-type style. Future updates will align the 
+visualizations stylistically and analytically to compare real-world historical data to simulated Monte Carlo data, in both individual and portfolio settings.
 
