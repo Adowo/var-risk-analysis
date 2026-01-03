@@ -1,12 +1,17 @@
 # Var-risk-analysis
 
-This project looks at downside risk for a few major stocks and commodities using historical market data, focusing mainly on Value-at-Risk (VaR) and Conditional VaR (CVaR). VaR shows what you can lose given a certain confidence level over a period of time and CVaR shows, if you’re below that confidence cutoff, how bad it can get. Along with looking at each asset individually (SPY, Gold and IEFA) the project also builds an equal-weighted portfolio so we can compare single-asset risk to a diversified mix. The goal is to see how tail-risk changes when you combine assets vs holding them alone.
+This project calculates and compares two key downside risk metrics - Value-at-Risk (VaR) and Conditional Value-at-Risk (CVaR) - using both historical data and Monte Carlo simulation.
+VaR estimates the maximum expected loss at a given confidence level (95% in our case). For example, a 1-day VaR of -1.5% means that on 95% of trading days, losses won't exceed 1.5%.
+CVaR (Expected Shortfall) measures the average loss when the VaR threshold is breached, capturing tail risk severity beyond VaR alone, in other words it would capture how bad things can get when losses exceed 1.5%. 
 
 # Methods  
-Prices are pulled from yfinance, then daily returns are used to estimate annual return, volatility, VaR and CVaR.  
-A quick return distribution plot highlights the VaR cutoff and the CVaR region so you can visually see how often bad days occur and how ugly they get once you cross that threshold.
+Methods
+Historical Approach:
 
----
+Daily returns calculated from yfinance price data (2015-present). VaR = 5th percentile of the return distribution. CVaR = average of returns below the VaR threshold. Applied to individual securities and portfolio.
+Monte Carlo Simulation:
+
+5,000 simulations using Geometric Brownian Motion. Parameters (drift μ, volatility σ) estimated from historical data. Simulates 504 trading days (~2 years) forward. 1-day VaR calculated from simulated day-1 returns for comparison with historical VaR. Full price paths visualized to show long-term uncertainty.
 
 ## Securities Looked At
 - SPY (U.S. equities)
@@ -19,11 +24,12 @@ Daily return distribution with VaR + CVaR highlighted:
 ![Gold VaR](images/Gold_Var.png)
 
 ---
+[Histogram of daily returns with VaR line and CVaR region highlighted in red]
+What this shows: The histogram displays the distribution of daily returns. The red vertical line marks the VaR threshold—95% of returns fall to the right of this line. The dark red shaded region shows the CVaR zone, representing the worst 5% of days.
 
 ## Portfolio
 
-An equal-weighted portfolio is created using the three assets.  
-Portfolio-level return, VaR and CVaR are computed to show how combining assets affects the downside.
+An equal-weighted portfolio (33.3% each security) demonstrates diversification benefits.
 
 Portfolio price progression:  
 ![Portfolio Return](images/Portfolio_Return.png)
@@ -33,10 +39,11 @@ Portfolio VaR / CVaR distribution:
 
 ---
 
-## Conclusion
+## Portfolio Conclusion
 
 Individually SPY, IEFA and Gold all have 1-day VaRs in the ~1.4–1.7% range and CVaRs around 2–3%.  
-But once they’re held together equally, portfolio VaR drops to ~1.15% and CVaR drops to ~1.8%.  
+But once they’re held together equally, portfolio VaR drops to ~1.15% and CVaR drops to ~1.8%. 
+Meaning that divesification leads to a VaR 20% to 30% lower than any individual assert.
 This means the combined portfolio has a less extreme downside than holding any one position alone.  
 This happens because the assets don’t move perfectly together therefore diversification reduces tail-losses.
 
