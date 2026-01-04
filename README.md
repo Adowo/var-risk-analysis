@@ -5,7 +5,6 @@ VaR estimates the maximum expected loss at a given confidence level (95% in our 
 CVaR (Expected Shortfall) measures the average loss when the VaR threshold is breached, capturing tail risk severity beyond VaR alone, in other words it would capture how bad things can get when losses exceed 1.5%. 
 
 # Methods  
-Methods
 Historical Approach:
 
 Daily returns calculated from yfinance price data (2015-present). VaR = 5th percentile of the return distribution. CVaR = average of returns below the VaR threshold. Applied to individual securities and portfolio.
@@ -43,7 +42,7 @@ Portfolio VaR / CVaR distribution:
 
 Individually SPY, IEFA and Gold all have 1-day VaRs in the ~1.4–1.7% range and CVaRs around 2–3%.  
 But once they’re held together equally, portfolio VaR drops to ~1.17% and CVaR drops to ~1.84%. 
-Meaning that divesification leads to a VaR 20% to 30% lower than any individual assert.
+Meaning that divesification leads to a VaR 20% to 30% lower than any individual assets.
 This means the combined portfolio has a less extreme downside than holding any one position alone.  
 This happens because the assets don’t move perfectly together therefore diversification reduces tail-losses.
 
@@ -115,8 +114,7 @@ The simulated portfolio maintains its diversification benefit, with VaR remainin
 ## Key Takeaways:
 
 - (1) Method Validation: Historical and Monte Carlo VaR values show strong agreement (average difference ~0.1%), confirming model consistency and validating the Geometric Brownian Motion assumptions. 
-
 - (2) Diversification Works: The equal-weighted portfolio reduces VaR by 20-30% compared to individual securities across both methodologies, demonstrating quantifiable risk reduction through imperfect correlation. 
-
-- (3) CVaR Reveals Tail Severity: Tail losses (CVaR) average 25-60% worse than VaR thresholds, with individual securities showing CVaR values ranging from -1.86% to -2.72% while the portfolio maintains lower tail risk at -1.57% to -1.84%. (4) Monte Carlo simulation validates diversification benefits persist in forward-looking scenarios, with the portfolio maintaining its risk advantage over a 504-day projection period.
+- (3) CVaR Reveals Tail Severity: Tail losses (CVaR) average 25-60% worse than VaR thresholds, with individual assets showing CVaR values ranging from -1.86% to -2.72% while the portfolio maintains lower tail risk at -1.57% to -1.84%.
+- (4) Monte Carlo simulation validates diversification benefits persist in forward-looking scenarios, with the portfolio maintaining its risk advantage over a 504-day projection period.
 
