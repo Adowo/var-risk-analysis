@@ -108,7 +108,9 @@ The simulated portfolio maintains its diversification benefit, with VaR remainin
 
 ## Key Takeaways:
 
-(1) Method Validation: Historical and Monte Carlo VaR values show strong agreement (average difference ~0.1%), confirming model consistency and validating the Geometric Brownian Motion assumptions. 
-(2) Diversification Works: The equal-weighted portfolio reduces VaR by 20-30% compared to individual securities across both methodologies, demonstrating quantifiable risk reduction through imperfect correlation. 
-(3) CVaR Reveals Tail Severity: Tail losses (CVaR) average 25-60% worse than VaR thresholds, with individual securities showing CVaR values ranging from -1.86% to -2.72% while the portfolio maintains lower tail risk at -1.57% to -1.84%. (4) Monte Carlo simulation validates diversification benefits persist in forward-looking scenarios, with the portfolio maintaining its risk advantage over a 504-day projection period.
+- (1) Method Validation: Historical and Monte Carlo VaR values show strong agreement (average difference ~0.1%), confirming model consistency and validating the Geometric Brownian Motion assumptions. 
+
+- (2) Diversification Works: The equal-weighted portfolio reduces VaR by 20-30% compared to individual securities across both methodologies, demonstrating quantifiable risk reduction through imperfect correlation. 
+
+- (3) CVaR Reveals Tail Severity: Tail losses (CVaR) average 25-60% worse than VaR thresholds, with individual securities showing CVaR values ranging from -1.86% to -2.72% while the portfolio maintains lower tail risk at -1.57% to -1.84%. (4) Monte Carlo simulation validates diversification benefits persist in forward-looking scenarios, with the portfolio maintaining its risk advantage over a 504-day projection period.
 
