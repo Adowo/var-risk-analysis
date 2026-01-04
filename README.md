@@ -73,8 +73,10 @@ Distribution of simulated 1-day returns. The shape closely resembles the histori
 
 [Side-by-side histogram comparison: Historical vs Monte Carlo returns]
 
-![Gold Monte Carlo comparison](distro_comparison.png)
+![Gold Monte Carlo comparison](images/distro_comparison.png)
 
+
+___
 What this shows: 
 Overlaid histograms demonstrate agreement between historical and simulated return distributions. Close VaR alignment indicates consistent risk assessment across both methods.
 With simulation slightly overestimating VaR leading to a fatter looking distribution to its historical counterpart.
@@ -83,8 +85,9 @@ With simulation slightly overestimating VaR leading to a fatter looking distribu
 
 [Portfolio Monte Carlo price paths]
 
-![Portfolio Monte Carlo Path](portfolio_path.png)
+![Portfolio Monte Carlo Path](images/portfolio_path.png)
 
+___
 What this shows: 
 Even in simulations, the portfolio exhibits lower volatility than individual assets, as seen by the tighter confidence band relative to single asset simulations.
 
@@ -92,7 +95,10 @@ Note: If Path Visualization doesnt show click autoscale button.
 
 [Portfolio Monte Carlo distribution]
 
-![Portfolio Monte Carlo distribution](Portfolio_distro(m).png)
+![Portfolio Monte Carlo distribution](images/Portfolio_distro(m).png)
+
+
+___
 
 What this shows: 
 The simulated portfolio maintains its diversification benefit, with VaR remaining lower than individual securities even in simulated scenarios.
